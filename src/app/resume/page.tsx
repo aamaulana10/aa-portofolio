@@ -80,6 +80,7 @@ export default function Resume() {
       <section className={styles.section}>
         <h2>Contact</h2>
         <p>Email: <a href="mailto:aamaulanabola10@gmail.com" className={styles.link}>aamaulanabola10@gmail.com</a></p>
+        <p>Mobile Phone: <a href="https://wa.me/6281911726037" className={styles.link}>+6281911726037</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/maulana-yusuf-68ba5013a/" className={styles.link}>https://www.linkedin.com/in/maulana-yusuf-68ba5013a/</a></p>
         <p>GitHub: <a href="https://www.github.com/aamaulana10" className={styles.link}>github.com/aamaulana10</a></p>
       </section>
