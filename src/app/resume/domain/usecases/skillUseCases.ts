@@ -1,9 +1,12 @@
-import { Skill, SkillCategory, skills } from '../models/Skill';
+import { SkillRepository } from '../../data/repositories/SkillRepository';
+import { Skill, SkillCategory } from '../models/Skill';
 
-export const getAllSkills = (): Skill[] => skills;
+const repository = new SkillRepository();
+
+export const getAllSkills = (): Skill[] => repository.getAll();
 
 export const getSkillsByCategory = (category: SkillCategory): Skill[] =>
-  skills.filter(skill => skill.category === category);
+  repository.getByCategory(category);
 
 export const getGroupedSkills = (): Map<SkillCategory, Skill[]> => {
   const groupedSkills = new Map<SkillCategory, Skill[]>();

@@ -1,6 +1,8 @@
-import { Certification, certifications } from '../models/Certification';
+import { CertificationRepository } from '../../data/repositories/CertificationRepository';
+import { Certification } from '../models/Certification';
 
-export const getAllCertifications = (): Certification[] => certifications;
+const repository = new CertificationRepository();
+export const getAllCertifications = (): Certification[] => repository.getAll();
 
 export const getCertificationById = (id: string): Certification | undefined =>
-  certifications.find(cert => cert.id === id); 
+  repository.getById(id);
