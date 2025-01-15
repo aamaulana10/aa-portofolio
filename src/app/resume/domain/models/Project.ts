@@ -33,7 +33,7 @@ export const projects: Project[] = [
     title: 'Mister Aladin - iOS',
     description: 'South east asia largest media company who wants to to scale up their Online Travel Agent App and make an E- Commerce to acquire more Users and improve their business.',
     link: 'https://apps.apple.com/id/app/mister-aladin-hotel-tur/id1144403123?l=id',
-    linkText: 'View on Play Store'
+    linkText: 'View on App Store'
   },
   {
     id: '5',

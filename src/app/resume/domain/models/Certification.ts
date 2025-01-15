@@ -21,7 +21,7 @@ export const certifications: Certification[] = [
     id: '2',
     title: 'Android Developer Expert',
     issuer: 'Dicoding Indonesia',
-    issueDate: 'January 2024',
+    issueDate: 'January 2019',
     credentialLink: '#',
     description: 'Advanced Android development certification covering architecture patterns, performance optimization, and best practices'
   }
