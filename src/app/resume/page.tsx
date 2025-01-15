@@ -2,6 +2,7 @@ import styles from './resume.module.css';
 import { getAllProjects } from './domain/usecases/projectUseCases';
 import { getGroupedSkills } from './domain/usecases/skillUseCases';
 import { getAllCertifications } from './domain/usecases/certificationUseCases';
+import Image from 'next/image';
 
 export default function Resume() {
   const projects = getAllProjects();
@@ -29,6 +30,7 @@ export default function Resume() {
         <div className={styles.projects}>
           {projects.map(project => (
             <div key={project.id} className={styles.projectCard}>
+              <Image width={100} height={100} src={project.image} alt={project.title} className={styles.projectImage} />
               <h3>{project.title}</h3>
               <p>{project.description}</p>
               <a href={project.link} className={styles.link}>{project.linkText}</a>
@@ -86,7 +88,7 @@ export default function Resume() {
       </section>
 
       <footer className={styles.footer}>
-        <p>© 2025 Senior Flutter Engineer. All rights reserved.</p>
+        <p>© 2025 Aa Maulana. All rights reserved.</p>
       </footer>
     </div>
   );
