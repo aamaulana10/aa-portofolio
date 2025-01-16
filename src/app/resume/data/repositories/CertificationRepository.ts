@@ -4,11 +4,11 @@ export class CertificationRepository {
   private certifications: Certification[] = [
     {
       id: '1',
-      title: 'Flutter Development Bootcamp with Dart',
+      title: 'Golang Programming from Beginner to Expert',
       issuer: 'Udemy',
       issueDate: 'March 2024',
       credentialLink: 'https://www.udemy.com/certificate/UC-c494fd2e-be2e-40d9-8f81-ef48bd55d008/',
-      description: 'Comprehensive Flutter development course covering state management, animations, and advanced UI patterns'
+      description: 'Comprehensive Golang development course covering Golang basic, MySql, Goroutine, Embed, Restful API, database, Context, Concurrency, and more'
     },
     {
       id: '2',
