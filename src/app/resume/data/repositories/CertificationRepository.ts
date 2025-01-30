@@ -12,6 +12,14 @@ export class CertificationRepository {
     },
     {
       id: '2',
+      title: 'Front-End Web Developer Expert',
+      issuer: 'Dicoding Indonesia',
+      issueDate: 'Jan 2025',
+      credentialLink: 'https://www.dicoding.com/certificates/53XEDJ3WVPRN',
+      description: 'Advanced Frontend development course covering PWA, End to end Testing, Unit Testing, Indexed DB, Web Performance, and more'
+    },
+    {
+      id: '3',
       title: 'Android Developer Expert',
       issuer: 'Dicoding Indonesia',
       issueDate: 'January 2019',
