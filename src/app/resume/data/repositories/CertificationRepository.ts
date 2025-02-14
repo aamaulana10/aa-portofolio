@@ -23,7 +23,7 @@ export class CertificationRepository {
       title: 'Android Developer Expert',
       issuer: 'Dicoding Indonesia',
       issueDate: 'January 2019',
-      credentialLink: '#',
+      credentialLink: 'https://www.dicoding.com/certificates/98XW6WMRLXM3',
       description: 'Advanced Android development certification covering architecture patterns, performance optimization, and best practices'
     }
   ];
