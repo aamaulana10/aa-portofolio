@@ -20,6 +20,14 @@ export class CertificationRepository {
     },
     {
       id: '3',
+      title: 'React Developer Expert',
+      issuer: 'Dicoding Indonesia',
+      issueDate: 'April 2025',
+      credentialLink: 'https://www.dicoding.com/certificates/53XED9R19PRN',
+      description: 'Advanced React development certification covering Redux, Automation Testing, CI CD and React Ecosystem'
+    },
+    {
+      id: '4',
       title: 'Android Developer Expert',
       issuer: 'Dicoding Indonesia',
       issueDate: 'January 2019',

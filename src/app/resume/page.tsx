@@ -1,41 +1,68 @@
+'use client'
+
 import styles from './resume.module.css';
 import { getAllProjects } from './domain/usecases/projectUseCases';
 import { getGroupedSkills } from './domain/usecases/skillUseCases';
 import { getAllCertifications } from './domain/usecases/certificationUseCases';
+import { ProjectCategory } from './domain/models/Project';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function Resume() {
   const projects = getAllProjects();
   const groupedSkills = getGroupedSkills();
   const certifications = getAllCertifications();
+  const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>(ProjectCategory.MOBILE);
 
   return (
     <div className={styles.body}>
       <header className={styles.header}>
         <h1>Portfolio - Maulana Yusuf Bahri (Aa)</h1>
-        <p>Tech Lead | Mobile Apps Specialist (Native, React Native, Flutter) | Frontend & Backend Enthusiast</p>
+        <p>Tech Lead | Software Engineer Lead</p>
       </header>
 
       <section className={styles.section}>
         <h2>About Me</h2>
         <p>
-          A Tech Lead with 10+ years of experience in mobile application development, specializing in both Native (Android & iOS) and Cross-Platform technologies (React Native, Flutter).
-          I have a proven track record of building high-performance mobile applications used by millions of users. Over the last four years, I have been leading technology teams, driving product development, and ensuring project success with a focus on quality and efficiency.
-          In addition to mobile development, I have experience with Frontend (Next.js) and Backend (Node.js, Golang). While my expertise lies in mobile apps, I am capable of contributing across technologies to support end-to-end product needs.
+        Tech Lead with 10+ years of experience delivering fullstack web and mobile applications at scale. Skilled in leading cross-functional teams, managing technical roadmaps, and delivering reliable products from idea to production. Hands-on with modern stacks like Next.js, React.js,Spring Boot, Golang, Kotlin, Swift, Flutter, React Native and Node.js. Currently driving tech execution and team growth at FIT HUB, with a long-term goal of becoming an Engineering Manager.
         </p>
       </section>
 
       <section className={styles.section}>
         <h2>Projects</h2>
-        <div className={styles.projects}>
-          {projects.map(project => (
-            <div key={project.id} className={styles.projectCard}>
-              <Image width={100} height={100} src={project.image} alt={project.title} className={styles.projectImage} />
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <a href={project.link} className={styles.link}>{project.linkText}</a>
-            </div>
+        <div className={styles.tabBar}>
+          {Object.values(ProjectCategory).map(category => (
+            <button
+              key={category}
+              className={`${styles.tabButton} ${selectedCategory === category ? styles.active : ''}`}
+              onClick={() => setSelectedCategory(category)}
+            >
+              {category}
+            </button>
           ))}
+        </div>
+        <div className={styles.projects}>
+          {projects
+            .filter(project => selectedCategory === project.category)
+            .map(project => (
+              <div key={project.id} className={styles.projectCard}>
+                 {project.category === ProjectCategory.MOBILE && project.image && (
+                  <Image width={100} height={100} src={project.image} alt={project.title} className={styles.projectImage} />
+                 )}
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                {project.category === ProjectCategory.FRONTEND && project.link && project.link !== '#' && (
+                  <iframe 
+                    src={project.link}
+                    className={styles.previewIframe}
+                    width="100%"
+                    height="500px"
+                    title={`${project.title} preview`}
+                  />
+                )}
+                <a href={project.link} className={styles.link}>{project.linkText}</a>
+              </div>
+            ))}
         </div>
       </section>
 

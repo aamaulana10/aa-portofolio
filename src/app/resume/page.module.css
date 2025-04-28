@@ -1,0 +1,120 @@
+.body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.tabBar {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.tabButton {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabButton:hover {
+  background: #f0f0f0;
+}
+
+.tabButton.active {
+  background: #0070f3;
+  color: white;
+  border-color: #0070f3;
+}
+
+.projectCard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.link {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.skillCategory {
+  margin-bottom: 2rem;
+}
+
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.skillItem {
+  background: #f0f0f0;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+}
+
+.certifications {
+  display: grid;
+  gap: 2rem;
+}
+
+.certificationCard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.certificationIssuer {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.certificationDescription {
+  margin-bottom: 1rem;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #ddd;
+  color: #666;
+}
