@@ -33,6 +33,14 @@ export class CertificationRepository {
       issueDate: 'January 2019',
       credentialLink: 'https://www.dicoding.com/certificates/98XW6WMRLXM3',
       description: 'Advanced Android development certification covering architecture patterns, performance optimization, and best practices'
+    },
+    {
+      id: '5',
+      title: 'Java Springboot, AWS, Docker, Microservices',
+      issuer: 'Udemy',
+      issueDate: 'June 2025',
+      credentialLink: 'https://lg.udemy.com/certificate/UC-6514a4df-e928-4ad4-adcc-0c80eddeaea4/',
+      description: 'Advanced backend development course covering Java Springboot, AWS, Docker, Microservices, and more'
     }
   ];
 

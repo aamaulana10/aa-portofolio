@@ -143,6 +143,12 @@ export class ProjectRepository {
       description: 'Backend services for FIT HUB platform including recaptcha, class scheduling, and user management.',
       category: ProjectCategory.BACKEND
     },
+    {
+      id: '17',
+      title: 'LG SM - Backend Services',
+      description: 'Backend services for SCM Project.',
+      category: ProjectCategory.BACKEND
+    },
   ]; 
 
   getAll(): Project[] {
