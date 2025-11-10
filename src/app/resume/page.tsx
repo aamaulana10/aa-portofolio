@@ -6,13 +6,19 @@ import { getGroupedSkills } from './domain/usecases/skillUseCases';
 import { getAllCertifications } from './domain/usecases/certificationUseCases';
 import { ProjectCategory } from './domain/models/Project';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { redirect } from 'next/navigation';
 
 export default function Resume() {
   const projects = getAllProjects();
   const groupedSkills = getGroupedSkills();
   const certifications = getAllCertifications();
   const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>(ProjectCategory.MOBILE);
+
+
+  useEffect(() => {
+    redirect('https://play.google.com/apps/internaltest/4701199280838115864')
+  }, []);
 
   return (
     <div className={styles.body}>
