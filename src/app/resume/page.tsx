@@ -6,8 +6,7 @@ import { getGroupedSkills } from './domain/usecases/skillUseCases';
 import { getAllCertifications } from './domain/usecases/certificationUseCases';
 import { ProjectCategory } from './domain/models/Project';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import { redirect } from 'next/navigation';
+import { useState } from 'react';
 
 export default function Resume() {
   const projects = getAllProjects();
