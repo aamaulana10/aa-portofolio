@@ -15,11 +15,6 @@ export default function Resume() {
   const certifications = getAllCertifications();
   const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>(ProjectCategory.MOBILE);
 
-
-  useEffect(() => {
-    redirect('https://play.google.com/apps/internaltest/4701199280838115864')
-  }, []);
-
   return (
     <div className={styles.body}>
       <header className={styles.header}>
