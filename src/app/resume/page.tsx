@@ -24,7 +24,7 @@ export default function Resume() {
       <section className={styles.section}>
         <h2>About Me</h2>
         <p>
-        Tech Lead with 10+ years of experience delivering fullstack web and mobile applications at scale. Skilled in leading cross-functional teams, managing technical roadmaps, and delivering reliable products from idea to production. Hands-on with modern stacks like Next.js, React.js,Spring Boot, Golang, Kotlin, Swift, Flutter, React Native and Node.js. Currently driving tech execution and team growth at FIT HUB, with a long-term goal of becoming an Engineering Manager.
+          Hands-on Tech Lead with 11+ years of experience, currently at TyrAds owning all frontend work across Flutter, Native Mobile, React, and Next.js. Still coding daily while driving architecture, mentoring the team, and delivering features from zero to production. Strong fullstack background with Kotlin, Swift, Flutter, React Native, Next.js, React.js, Spring Boot, Golang, and Node.js.
         </p>
       </section>
 
